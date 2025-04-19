@@ -4,16 +4,16 @@ void solve()
 {
     string s;
     cin >> s;
-    stack<string> st;
-    for(int i = s.size()-1; i>= 0;i--)
+    stack<string> st; // luu cac bieu thuc trung gian
+    for(int i = s.size()-1; i>= 0;i--) // duyet tu phai sang trai
     {
-        if(isalpha(s[i]))
+        if(isalpha(s[i])) // neu ki tu la chu cai
         {
-            string tmp ="";
+            string tmp =""; // tao chuoi ki tu moi
             tmp += s[i];
             st.push(tmp);
         }
-        else
+        else // neu ki tu khong phai chu cai
         {
             string s1 = st.top();
             st.pop();
